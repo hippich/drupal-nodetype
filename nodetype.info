@@ -1,4 +1,3 @@
-; $Id$
 name = Nodetype
 description = Allows you to change the content type of posts while editing them.
 core = "6.x"
