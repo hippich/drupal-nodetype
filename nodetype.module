@@ -34,7 +34,7 @@ function nodetype_node_presave($node) {
  * Implementation of hook_form_alter().
  */
 function nodetype_form_alter(&$form, $form_state, $form_id) {
-  if (isset($form['type']) && $form['type']['#value'] .'_node_form' == $form_id && isset($form['#node']->nid) && user_access('change node types')) {
+  if (isset($form['type']) && isset($form['type']['#value']) && $form['type']['#value'] .'_node_form' == $form_id && isset($form['#node']->nid) && user_access('change node types')) {
     $types = node_type_get_types();
 
     foreach ($types as $type => $info) {
